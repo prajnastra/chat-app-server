@@ -28,6 +28,10 @@ io.on('connection', (socket) => {
 
 app.use(Gun.serve)
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 const port = process.env.PORT || 8000
 
 const server = http.listen(port, function () {
